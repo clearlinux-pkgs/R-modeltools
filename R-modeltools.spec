@@ -4,13 +4,13 @@
 #
 Name     : R-modeltools
 Version  : 0.2.22
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/modeltools_0.2-22.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/modeltools_0.2-22.tar.gz
 Summary  : Tools and Classes for Statistical Models
 Group    : Development/Tools
 License  : GPL-2.0
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 The functionality is experimental and the user interface is likely to
@@ -27,11 +27,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1531797053
+export SOURCE_DATE_EPOCH=1552777221
 
 %install
+export SOURCE_DATE_EPOCH=1552777221
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1531797053
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -66,8 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library modeltools|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  modeltools || :
 
 
 %files
@@ -92,3 +91,4 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/modeltools/help/paths.rds
 /usr/lib64/R/library/modeltools/html/00Index.html
 /usr/lib64/R/library/modeltools/html/R.css
+/usr/lib64/R/library/modeltools/tests/regtest.R
