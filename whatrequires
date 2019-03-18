@@ -1,6 +1,11 @@
 # This file contains recursive sources that require this package
+R-DendSer
 R-betareg
 R-coin
+R-dendextend
 R-flexmix
+R-fpc
+R-libcoin
 R-party
+R-phylogram
 R-topicmodels
