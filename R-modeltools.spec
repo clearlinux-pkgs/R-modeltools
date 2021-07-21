@@ -4,7 +4,7 @@
 #
 Name     : R-modeltools
 Version  : 0.2.23
-Release  : 35
+Release  : 36
 URL      : https://cran.r-project.org/src/contrib/modeltools_0.2-23.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/modeltools_0.2-23.tar.gz
 Summary  : Tools and Classes for Statistical Models
